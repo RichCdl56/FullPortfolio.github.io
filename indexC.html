@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="appC.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&amp;display=swap">
+</head>
+<body>
+    <header>
+        <a href="https://github.com/RichCdl56" class="logo">R.CDL</a>
+        <div class="righSide">
+            <div class="btns dayNight">
+                <ion-icon name="moon-outline"></ion-icon>
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+                <div class="btns menuToggle">
+                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- Sidebar Navigation -->
+    <ul class="navigation">
+        <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/indexP.html">Portfolio</a></li>
+        <li><a href="http://127.0.0.1:5500/indexW.html">Work</a></li>
+        <li><a href="http://127.0.0.1:5500/indexC.html">Contact</a></li>
+    </ul>
+
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contact Me</h2>
+            <p>Do not hesitate to contact me and I'll answer you as soon as possible.</p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h2>Infos Contact</h2>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text">
+                            <h2>Adress</h2>
+                            <p>XXXXXXXXXXX ,<br>XXXXXXX,  France,<br>XXXXX</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h2>Phone</h2>
+                            <p>+33.X.XX.XX.XX.XX</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="text">
+                            <h2>Email</h2>
+                            <p>richardcordelle@hotmail.fr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="" alt="">
+            <div class="formBx">
+                <form>
+                    <h2>Message Me</h2>
+                    <input type="text" name="" placeholder="FullName">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Votre Message"></textarea>
+                    <form method=post action="mailto:richardcordelle@hotmail.fr?subject=Demande d'informations"></form>
+                    <button class="button">
+                </form>
+                <span class="default">Send</span>
+                <span class="success">Sent</span>
+                <div class="left"></div>
+                <div class="right"></div>
+                </button>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/RichCdl/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://twitter.com/CordelleRichard"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/rich_cdl/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/in/richard-cordelle/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+        <p>Copyright © 2021 R.CDL. All Right Reserved.</p>
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
+    </script>
+    <script type="text/javascript">
+        var text = document.getElementById('text');
+        var word = text.getElementsByTagName('span');
+
+        var i = 0;
+
+        function rotator() {
+            word[i].style.display = 'none';
+            i = (i + 1) % word.length;
+            word[i].style.display = 'initial';
+        }
+        setInterval(rotator, 800);
+    </script>
+    <script>
+        let dayNight = document.querySelector('.dayNight')
+        let menuToggle = document.querySelector('.menuToggle')
+        let body = document.querySelector('body')
+        let navigation = document.querySelector('.navigation')
+
+        dayNight.onclick = function(){
+            body.classList.toggle('dark')
+            dayNight.classList.toggle('active')
+        }
+
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
+    <script src="appC.js"></script>
+</body>
+</html>
